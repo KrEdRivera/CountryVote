@@ -1,0 +1,147 @@
+# ==================
+# ANGULAR FRONTEND
+# ==================
+
+# Dependencies
+front-country-voting/node_modules/
+front-country-voting/package-lock.json
+front-country-voting/yarn.lock
+
+# Build output
+front-country-voting/dist/
+front-country-voting/out-tsc/
+front-country-voting/build/
+
+# Environment
+front-country-voting/.env
+front-country-voting/.env.local
+front-country-voting/.env.*.local
+
+# IDE - VS Code
+front-country-voting/.vscode/
+front-country-voting/.VS/
+
+# IDE - WebStorm
+front-country-voting/.idea/
+front-country-voting/*.iml
+front-country-voting/*.iws
+front-country-voting/*.ipr
+
+# IDE - JetBrains
+front-country-voting/.fleet/
+
+# OS
+front-country-voting/.DS_Store
+front-country-voting/Thumbs.db
+
+# Testing
+front-country-voting/coverage/
+front-country-voting/.nyc_output/
+
+# Angular
+front-country-voting/.angular/
+
+# ==================
+# JAVA BACKEND
+# ==================
+
+# Maven
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/bin/
+backend/*.class
+
+# Gradle
+backend/.gradle/
+backend/build/
+backend/gradle/
+backend/gradlew
+backend/gradlew.bat
+
+# IDE - IntelliJ IDEA
+backend/.idea/
+backend/*.iml
+backend/*.iws
+backend/*.ipr
+backend/out/
+
+# IDE - VS Code
+backend/.vscode/
+backend/.VS/
+
+# IDE - Eclipse
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/bin/
+
+# Build artifacts
+backend/*.jar
+backend/*.war
+backend/*.nar
+backend/*.ear
+backend/*.zip
+backend/*.tar.gz
+backend/*.rar
+
+# Environment
+backend/.env
+backend/.env.local
+backend/.env.*.local
+backend/application-*.properties
+backend/application-*.yml
+
+# Logs
+backend/logs/
+backend/*.log
+backend/*.log.*
+
+# OS
+backend/.DS_Store
+backend/Thumbs.db
+
+# Database
+backend/database/
+backend/*.db
+backend/*.sqlite
+
+# ==================
+# ROOT LEVEL
+# ==================
+
+# System
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# OS specific
+.vagrant/
+.history/
+
+# ==================
+# COMMON BUILD ARTIFACTS
+# ==================
+
+dist/
+build/
+*.exe
+*.dll
+*.so
+
