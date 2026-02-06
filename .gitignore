@@ -1,3 +1,55 @@
+############################
+# Común (root del monorepo)
+############################
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.bak
+
+.env
+.env.local
+.env.*.local
+
+.idea/
+.vscode/
+*.iml
+
+############################
+# Java / Maven / Gradle
+############################
+# Compilados
+target/
+build/
+out/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+.settings/
+.classpath
+.project
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+############################
+# Spring Boot
+############################
+logs/
+application-*.yml
+application-*.properties
+
+
 # Angular specific
 /dist/
 /out-tsc/
