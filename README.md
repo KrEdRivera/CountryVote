@@ -1,53 +1,131 @@
 # CountryVote - Sistema de Votación de Países
 
-CountryVote es una aplicación web moderna que permite a los usuarios votar por sus países favoritos y ver un ranking en tiempo real de los votos recibidos. El proyecto está dividido en una arquitectura de microservicios con un frontend desarrollado en Angular y un backend escalable.
+CountryVote es una aplicación web moderna que permite a los usuarios votar por sus países favoritos y ver un ranking en tiempo real de los votos recibidos. El proyecto está dividido en una arquitectura de microservicios con un frontend desarrollado en Angular y un backend escalable en Spring Boot.
 
 ## 📋 Descripción General
 
 CountryVote proporciona:
 - **Votación interactiva** de países con validación de datos
 - **Ranking dinámico** actualizado en tiempo real
-- **API REST** robusta y escalable
+- **API REST** robusta y escalable con Swagger/OpenAPI
 - **Interfaz intuitiva y responsiva** con Material Design
 - **Arquitectura modular** y mantenible
+- **Base de datos H2** para persistencia de votos
 
 ## 📁 Estructura del Proyecto
 
 ```
 CountryVote/
-├── front-country-voting/        # Frontend (Angular 18)
+├── front-country-voting/          # Frontend (Angular 18)
 │   ├── src/
 │   ├── package.json
 │   ├── angular.json
-│   └── README.md               # Ver documentación detallada aquí
-├── backend/                     # Backend (si existe)
-└── README.md                    # Este archivo
+│   └── README.md                  # Documentación del frontend
+├── back-country-voting/           # Backend (Spring Boot 4.0.2)
+│   ├── src/
+│   ├── pom.xml
+│   └── README.md                  # Documentación del backend
+└── README.md                       # Este archivo
 ```
 
 ## 🎯 Componentes Principales
 
-### Frontend - FrontCountryVoting
+### Frontend - FrontCountryVoting (Angular 18)
 
-Aplicación Angular 18 que implementa:
-- Formulario de votación con validación
+Aplicación Angular que implementa:
+- Formulario de votación con validación avanzada
 - Tabla de ranking con ordenamiento y filtrado
-- Comunicación en tiempo real con el backend
+- Integración HTTP con el backend
 - Diseño responsivo con Material Design
 
 **Para más detalles ver**: [front-country-voting/README.md](./front-country-voting/README.md)
 
-### Backend
+### Backend - BackCountryVoting (Spring Boot 4.0.2)
 
 Sistema API REST que gestiona:
-- Persistencia de votos
-- Cálculo de rankings
-- Gestión de países
+- Persistencia de votos en base de datos H2
+- Cálculo y ranking de países votados
+- Endpoints RESTful para votación
+- Documentación automática con Swagger/OpenAPI
+
+**Para más detalles ver**: [back-country-voting/README.md](./back-country-voting/README.md)
 
 ## 🚀 Inicio Rápido
 
 ### Requisitos Previos
 
-- Node.js v18+
+- **Node.js** v18+ (para el frontend)
+- **Java** 21+ (para el backend)
+- **Maven** 3.8+ (para compilar el backend)
+- **npm** o **yarn** (para el frontend)
+
+### Instalación y Ejecución
+
+#### Frontend
+
+```bash
+cd front-country-voting
+npm install
+npm start
+```
+
+La aplicación estará disponible en `http://localhost:4200`
+
+#### Backend
+
+```bash
+cd back-country-voting
+mvn clean install
+mvn spring-boot:run
+```
+
+La API estará disponible en `http://localhost:8080`
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- H2 Console: `http://localhost:8080/h2-console`
+
+## 🔗 Enlaces Principales
+
+| Recurso | URL |
+|---------|-----|
+| Frontend | http://localhost:4200 |
+| Backend API | http://localhost:8080/api/v1 |
+| Swagger UI | http://localhost:8080/swagger-ui.html |
+| H2 Database Console | http://localhost:8080/h2-console |
+
+## 📚 Endpoints Principales
+
+### Votación
+- `POST /api/v1/votes` - Registrar un nuevo voto
+- `GET /api/v1/votes/ranking` - Obtener ranking de países votados
+
+## 🏗️ Arquitectura
+
+El proyecto sigue una arquitectura de **tres capas**:
+
+1. **Frontend (Angular)** - Interfaz de usuario responsiva
+2. **Backend (Spring Boot)** - Lógica de negocio y persistencia
+3. **Base de Datos (H2)** - Almacenamiento de datos
+
+## 🛠️ Tecnologías Utilizadas
+
+### Frontend
+- Angular 18
+- Material Design
+- RxJS
+- TypeScript
+- SCSS
+
+### Backend
+- Spring Boot 4.0.2
+- Spring Data JPA
+- Spring Validation
+- Lombok
+- Springdoc OpenAPI
+- H2 Database
+
+## 📝 Licencia
+
+Este proyecto está licenciado bajo MIT License.
 - npm v9+
 - Git
 
