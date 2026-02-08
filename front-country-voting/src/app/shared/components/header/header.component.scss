@@ -1,0 +1,54 @@
+.header-container {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 25px;
+  gap: 6px;
+}
+
+.navbar > .container{
+  justify-content: start;
+}
+
+.header-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.separator {
+  color: #8a8c90;
+  font-weight: 500;
+  font-size: xx-large;
+  margin: 0 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.text-family {
+  font-family: "Monserrat", sans-serif;
+}

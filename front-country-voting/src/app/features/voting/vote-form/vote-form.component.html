@@ -1,0 +1,61 @@
+<div class="vote-form-container">
+  <mat-card class="vote-card">
+    <mat-card-content class="vote-card-content">
+      <div *ngIf="showMessage" class="message-container" [ngClass]="'message-' + messageType">
+        <mat-icon *ngIf="messageType==='success'" svgIcon="check_circle" class="check-ok"></mat-icon>
+        <mat-icon *ngIf="messageType==='error'" svgIcon="cancel_circle" class="cancel-ok"></mat-icon>
+        <p class="message-text">{{ messageText }}</p>
+      </div>
+      
+      <div *ngIf="!showMessage">
+        <p class="fw-bolder mb-2">Vote your Favourite Country</p>        
+        <form [formGroup]="voteForm" (ngSubmit)="onSubmit()" class="vote-form">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" placeholder="Name">
+                <mat-error *ngIf="voteForm.get('name')?.hasError('required')">
+                  Name is required
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="col-md-3">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" placeholder="Email" pattern="{{patternEmail}}">
+                <mat-error *ngIf="voteForm.get('email')?.hasError('required')">
+                  Email is required
+                </mat-error>
+                <mat-error *ngIf="voteForm.get('email')?.hasError('email') || voteForm.get('email')?.hasError('pattern')">
+                  Please enter a valid email
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="col-md-3">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Country</mat-label>
+                <mat-select formControlName="country">
+                  <mat-option *ngFor="let country of selectCountries" [value]="country.name">
+                    {{country.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="voteForm.get('country')?.hasError('required')">
+                  Country is required
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="col-md-3 d-flex align-items-start">
+              <button mat-fab extended color="primary" type="submit" class="submit-btn w-100" [disabled]="voteForm.invalid">
+                Submit Vote
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
